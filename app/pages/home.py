@@ -54,6 +54,7 @@ def sii_connector_promo() -> rx.Component:
                 rx.el.button(
                     "Conoce más",
                     rx.icon("arrow-right", class_name="ml-2"),
+                    on_click=State.set_page("sii_conn"),
                     class_name="bg-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-1",
                 ),
                 class_name="md:w-1/2",

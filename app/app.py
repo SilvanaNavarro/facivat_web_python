@@ -5,6 +5,7 @@ from app.components.footer import footer
 from app.pages.home import home_page
 from app.pages.about import about_page
 from app.pages.contact import contact_page
+from app.pages.sii_conn import sii_conn_page
 
 
 def index() -> rx.Component:
@@ -16,6 +17,7 @@ def index() -> rx.Component:
                 ("home", home_page()),
                 ("about", about_page()),
                 ("contact", contact_page()),
+                ("sii_conn", sii_conn_page()),
                 home_page(),
             )
         ),
