@@ -164,8 +164,8 @@ def intro_section() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.img(
-                    src="/services_development_professional.png",
-                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-orange-500/50",
+                    src="/FACIVAT/3.png",
+                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover",
                 ),
                 class_name="md:w-5/12",
             ),
@@ -175,7 +175,7 @@ def intro_section() -> rx.Component:
                     class_name="text-3xl md:text-4xl font-bold text-white mb-6",
                 ),
                 rx.el.p(
-                    "En Tech Solutions, forjamos el futuro de su empresa a través de un ecosistema de soluciones tecnológicas integrales. Desde el desarrollo de aplicaciones a medida que se adaptan a sus procesos, hasta la creación de agentes de IA de vanguardia para automatizar tareas complejas. Construimos robustas arquitecturas en la nube que garantizan escalabilidad, seguridad y acceso ininterrumpido a sus datos, sentando las bases para un crecimiento sostenible.",
+                    "En FACIVAT, forjamos el futuro de su empresa a través de un ecosistema de soluciones tecnológicas integrales. Desde el desarrollo de aplicaciones a medida que se adaptan a sus procesos, hasta la creación de agentes de IA de vanguardia para automatizar tareas complejas. Construimos robustas arquitecturas en la nube que garantizan escalabilidad, seguridad y acceso ininterrumpido a sus datos, sentando las bases para un crecimiento sostenible.",
                     class_name="text-gray-300 mb-4 leading-relaxed",
                 ),
                 rx.el.p(
@@ -192,8 +192,8 @@ def intro_section() -> rx.Component:
 
 def home_page() -> rx.Component:
     return rx.el.div(
-        animated_service_banner(),
         intro_section(),
+        animated_service_banner(),
         sii_connector_promo(),
         other_services(),
     )

@@ -6,7 +6,7 @@ def footer() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.p(
-                    "© 2024 Tech Solutions Inc. Todos los derechos reservados.",
+                    "© 2025 FACIVAT SpA. Todos los derechos reservados.",
                     class_name="text-sm text-gray-400",
                 ),
                 rx.el.div(

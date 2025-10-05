@@ -19,15 +19,15 @@ def navbar() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.img(
-                    src="/modern_technology_company.png", class_name="h-20 w-auto"
+                    src="/FACIVAT/2.png", class_name="h-40 w-auto"
                 ),
                 rx.el.div(
                     rx.el.h1(
-                        "Tech Solutions",
+                        "FACIVAT",
                         class_name="text-2xl font-bold text-white tracking-wider",
                     ),
                     rx.el.p(
-                        "Innovación y Desarrollo Tecnológico",
+                        "Su socio de confianza en el camino hacia la innovación",
                         class_name="text-sm text-gray-300",
                     ),
                     class_name="ml-4",
