@@ -159,5 +159,41 @@ def other_services() -> rx.Component:
     )
 
 
+def intro_section() -> rx.Component:
+    return rx.el.section(
+        rx.el.div(
+            rx.el.div(
+                rx.el.img(
+                    src="/services_development_professional.png",
+                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-orange-500/50",
+                ),
+                class_name="md:w-5/12",
+            ),
+            rx.el.div(
+                rx.el.h2(
+                    "Arquitectos de su Transformación Digital",
+                    class_name="text-3xl md:text-4xl font-bold text-white mb-6",
+                ),
+                rx.el.p(
+                    "En Tech Solutions, forjamos el futuro de su empresa a través de un ecosistema de soluciones tecnológicas integrales. Desde el desarrollo de aplicaciones a medida que se adaptan a sus procesos, hasta la creación de agentes de IA de vanguardia para automatizar tareas complejas. Construimos robustas arquitecturas en la nube que garantizan escalabilidad, seguridad y acceso ininterrumpido a sus datos, sentando las bases para un crecimiento sostenible.",
+                    class_name="text-gray-300 mb-4 leading-relaxed",
+                ),
+                rx.el.p(
+                    "Ofrecemos asesoría y consultoría estratégica, guiados por Project Managers certificados, para asegurar que cada iniciativa genere un impacto medible. Integramos sus sistemas, unificando flujos de trabajo para potenciar la eficiencia. Ya sea que necesite una página web cautivadora o una consultoría experta para navegar el panorama tecnológico, somos su socio de confianza en el camino hacia la innovación.",
+                    class_name="text-gray-300 leading-relaxed",
+                ),
+                class_name="md:w-7/12",
+            ),
+            class_name="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12",
+        ),
+        class_name="bg-gray-900",
+    )
+
+
 def home_page() -> rx.Component:
-    return rx.el.div(animated_service_banner(), sii_connector_promo(), other_services())
+    return rx.el.div(
+        animated_service_banner(),
+        intro_section(),
+        sii_connector_promo(),
+        other_services(),
+    )

@@ -19,7 +19,18 @@ def navbar() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.img(
-                    src="/modern_technology_company.png", class_name="h-12 w-auto"
+                    src="/modern_technology_company.png", class_name="h-20 w-auto"
+                ),
+                rx.el.div(
+                    rx.el.h1(
+                        "Tech Solutions",
+                        class_name="text-2xl font-bold text-white tracking-wider",
+                    ),
+                    rx.el.p(
+                        "Innovación y Desarrollo Tecnológico",
+                        class_name="text-sm text-gray-300",
+                    ),
+                    class_name="ml-4",
                 ),
                 class_name="flex items-center",
             ),
@@ -29,7 +40,7 @@ def navbar() -> rx.Component:
                 navbar_link("Contacto", "contact"),
                 class_name="hidden md:flex items-center space-x-4",
             ),
-            class_name="container mx-auto px-6 py-4 flex justify-between items-center",
+            class_name="container mx-auto px-6 py-6 flex justify-between items-center",
         ),
-        class_name="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-lg",
+        class_name="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 shadow-lg border-b border-blue-800/30",
     )
