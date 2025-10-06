@@ -54,7 +54,7 @@ def sii_connector_promo() -> rx.Component:
                 rx.el.button(
                     "Conoce más",
                     rx.icon("arrow-right", class_name="ml-2"),
-                    on_click=State.set_page("sii_conn"),
+                    on_click=lambda: State.set_page("sii_conn"),
                     class_name="bg-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-1",
                 ),
                 class_name="md:w-1/2",
@@ -62,7 +62,11 @@ def sii_connector_promo() -> rx.Component:
             rx.el.div(
                 rx.el.video(
                     src="/sii_conn/sii_conn_promo.mp4",
-                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-blue-800"
+                    auto_play=True,
+                    loop=True,
+                    muted=True,
+                    plays_inline=True,
+                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-blue-800",
                 ),
                 class_name="md:w-1/2 mt-8 md:mt-0",
             ),
@@ -165,7 +169,7 @@ def intro_section() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.img(
-                    src="/FACIVAT/integracion.png",
+                    src="placeholder.svg",
                     class_name="rounded-xl shadow-2xl w-full h-auto object-cover",
                 ),
                 class_name="md:w-5/12",

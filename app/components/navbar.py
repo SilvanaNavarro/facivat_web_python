@@ -5,7 +5,7 @@ from app.states.state import State
 def navbar_link(text: str, page_name: str) -> rx.Component:
     return rx.el.a(
         text,
-        on_click=State.set_page(page_name),
+        on_click=lambda: State.set_page(page_name),
         class_name=rx.cond(
             State.current_page == page_name,
             "px-4 py-2 text-orange-500 font-semibold border-b-2 border-orange-500 cursor-pointer",
