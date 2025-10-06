@@ -26,7 +26,7 @@ def feature_section(
 def demo_form_dialog() -> rx.Component:
     return rx.el.dialog(
         rx.el.div(
-            class_name="fixed inset-0 bg-black/50 backdrop-blur-sm",
+            class_name="fixed inset-0 bg-black/50 backdrop-blur-sm z-40",
             on_click=State.close_demo_form,
         ),
         rx.el.div(
@@ -81,9 +81,9 @@ def demo_form_dialog() -> rx.Component:
                 ),
                 class_name="bg-gray-900/80 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-blue-800/50 w-full max-w-lg",
             ),
-            class_name="z-50 m-4",
+            class_name="flex z-50 m-4",
         ),
-        class_name="fixed open:flex z-50 h-full w-full inset-0 items-center justify-center",
+        class_name="fixed open:flex z-40 h-full w-full inset-0 items-center justify-center bg-transparent",
         open=State.show_demo_form,
     )
 
