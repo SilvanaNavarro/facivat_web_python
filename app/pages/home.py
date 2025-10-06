@@ -86,7 +86,7 @@ def other_services() -> rx.Component:
             rx.el.div(
                 rx.el.div(
                     rx.el.img(
-                        src="/modern_illustration_custom.png",
+                        src="/agente_ia.jpg",
                         class_name="w-full h-48 object-cover rounded-t-lg",
                     ),
                     rx.el.div(
@@ -104,7 +104,7 @@ def other_services() -> rx.Component:
                 ),
                 rx.el.div(
                     rx.el.img(
-                        src="/cloud_architecture_diagram.png",
+                        src="/cloud.jpg",
                         class_name="w-full h-48 object-cover rounded-t-lg",
                     ),
                     rx.el.div(
@@ -122,7 +122,7 @@ def other_services() -> rx.Component:
                 ),
                 rx.el.div(
                     rx.el.img(
-                        src="/custom_software_application.png",
+                        src="/soluciones_amedida.jpg",
                         class_name="w-full h-48 object-cover rounded-t-lg",
                     ),
                     rx.el.div(
@@ -140,7 +140,7 @@ def other_services() -> rx.Component:
                 ),
                 rx.el.div(
                     rx.el.img(
-                        src="/project_management_consulting.png",
+                        src="/asesoria2.jpg",
                         class_name="w-full h-48 object-cover rounded-t-lg",
                     ),
                     rx.el.div(
@@ -169,7 +169,7 @@ def intro_section() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.img(
-                    src="placeholder.svg",
+                    src="servicios.jpg",
                     class_name="rounded-xl shadow-2xl w-full h-auto object-cover",
                 ),
                 class_name="md:w-5/12",

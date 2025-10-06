@@ -18,7 +18,7 @@ def navbar() -> rx.Component:
     return rx.el.header(
         rx.el.div(
             rx.el.div(
-                rx.el.img(src="/FACIVAT/2.png", class_name="h-40 w-auto"),
+                rx.el.img(src="/FACIVAT/2.png", class_name="h-20 w-auto"),
                 rx.el.div(
                     rx.el.h1(
                         "FACIVAT",
