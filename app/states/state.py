@@ -7,6 +7,12 @@ class Service(rx.Base):
     description: str
 
 
+class OtherServiceInfo(rx.Base):
+    image: str
+    title: str
+    description: str
+
+
 def is_valid_email(email: str) -> bool:
     pattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
     return bool(re.match(pattern, email))
@@ -31,10 +37,41 @@ class State(rx.State):
     ]
     form_data: dict[str, str] = {}
     show_demo_form: bool = False
+    active_service_index: int = -1
+    other_services_list: list[OtherServiceInfo] = [
+        OtherServiceInfo(
+            image="/agente_ia.jpg",
+            title="Crea tus Propios Agentes IA",
+            description="Desarrollamos agentes de inteligencia artificial personalizados para automatizar tareas y optimizar procesos.",
+        ),
+        OtherServiceInfo(
+            image="/cloud.jpg",
+            title="Arquitecturas Modernas en la Nube",
+            description="Centralizamos tus datos con el diseño e implementación de arquitecturas on-cloud escalables y seguras.",
+        ),
+        OtherServiceInfo(
+            image="/soluciones_amedida.jpg",
+            title="Aplicaciones Personalizadas",
+            description="Desarrollamos aplicaciones a medida que se ajustan perfectamente a las necesidades de tu negocio.",
+        ),
+        OtherServiceInfo(
+            image="/asesoria2.jpg",
+            title="Asesorías de Proyectos",
+            description="Ofrecemos asesoría con Project Managers certificados para garantizar el éxito de tus proyectos tecnológicos.",
+        ),
+    ]
+
+    @rx.event
+    def set_active_service_index(self, index: int):
+        if self.active_service_index == index:
+            self.active_service_index = -1
+        else:
+            self.active_service_index = index
 
     @rx.event
     def set_page(self, page_name: str):
         self.current_page = page_name
+        self.active_service_index = -1
 
     @rx.event
     def open_demo_form(self):

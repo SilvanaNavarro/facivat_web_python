@@ -76,6 +76,29 @@ def sii_connector_promo() -> rx.Component:
     )
 
 
+def service_card(service: rx.Var[dict], index: int) -> rx.Component:
+    return rx.el.div(
+        rx.el.img(
+            src=service["image"], class_name="w-full h-48 object-cover rounded-t-lg"
+        ),
+        rx.el.div(
+            rx.el.h3(service["title"], class_name="text-xl font-bold text-white mb-2"),
+            rx.cond(
+                State.active_service_index == index,
+                rx.el.button(
+                    "Contactar",
+                    on_click=lambda: State.set_page("contact"),
+                    class_name="mt-4 w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition-all",
+                ),
+                rx.el.p(service["description"], class_name="text-gray-400"),
+            ),
+            class_name="p-6",
+        ),
+        on_click=lambda: State.set_active_service_index(index),
+        class_name="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden border border-blue-800/50 transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer",
+    )
+
+
 def other_services() -> rx.Component:
     return rx.el.section(
         rx.el.div(
@@ -84,78 +107,7 @@ def other_services() -> rx.Component:
                 class_name="text-3xl md:text-4xl font-bold text-white mb-12 text-center",
             ),
             rx.el.div(
-                rx.el.div(
-                    rx.el.img(
-                        src="/agente_ia.jpg",
-                        class_name="w-full h-48 object-cover rounded-t-lg",
-                    ),
-                    rx.el.div(
-                        rx.el.h3(
-                            "Crea tus Propios Agentes IA",
-                            class_name="text-xl font-bold text-white mb-2",
-                        ),
-                        rx.el.p(
-                            "Desarrollamos agentes de inteligencia artificial personalizados para automatizar tareas y optimizar procesos.",
-                            class_name="text-gray-400",
-                        ),
-                        class_name="p-6",
-                    ),
-                    class_name="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden border border-blue-800/50 transform hover:-translate-y-2 transition-transform duration-300",
-                ),
-                rx.el.div(
-                    rx.el.img(
-                        src="/cloud.jpg",
-                        class_name="w-full h-48 object-cover rounded-t-lg",
-                    ),
-                    rx.el.div(
-                        rx.el.h3(
-                            "Arquitecturas Modernas en la Nube",
-                            class_name="text-xl font-bold text-white mb-2",
-                        ),
-                        rx.el.p(
-                            "Centralizamos tus datos con el diseño e implementación de arquitecturas on-cloud escalables y seguras.",
-                            class_name="text-gray-400",
-                        ),
-                        class_name="p-6",
-                    ),
-                    class_name="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden border border-blue-800/50 transform hover:-translate-y-2 transition-transform duration-300",
-                ),
-                rx.el.div(
-                    rx.el.img(
-                        src="/soluciones_amedida.jpg",
-                        class_name="w-full h-48 object-cover rounded-t-lg",
-                    ),
-                    rx.el.div(
-                        rx.el.h3(
-                            "Aplicaciones Personalizadas",
-                            class_name="text-xl font-bold text-white mb-2",
-                        ),
-                        rx.el.p(
-                            "Desarrollamos aplicaciones a medida que se ajustan perfectamente a las necesidades de tu negocio.",
-                            class_name="text-gray-400",
-                        ),
-                        class_name="p-6",
-                    ),
-                    class_name="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden border border-blue-800/50 transform hover:-translate-y-2 transition-transform duration-300",
-                ),
-                rx.el.div(
-                    rx.el.img(
-                        src="/asesoria2.jpg",
-                        class_name="w-full h-48 object-cover rounded-t-lg",
-                    ),
-                    rx.el.div(
-                        rx.el.h3(
-                            "Asesorías de Proyectos",
-                            class_name="text-xl font-bold text-white mb-2",
-                        ),
-                        rx.el.p(
-                            "Ofrecemos asesoría con Project Managers certificados para garantizar el éxito de tus proyectos tecnológicos.",
-                            class_name="text-gray-400",
-                        ),
-                        class_name="p-6",
-                    ),
-                    class_name="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden border border-blue-800/50 transform hover:-translate-y-2 transition-transform duration-300",
-                ),
+                rx.foreach(State.other_services_list, service_card),
                 class_name="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
             ),
             class_name="container mx-auto px-6 py-20",
