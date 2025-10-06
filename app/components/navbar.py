@@ -30,7 +30,8 @@ def navbar() -> rx.Component:
                     ),
                     class_name="ml-4",
                 ),
-                class_name="flex items-center",
+                class_name="flex items-center cursor-pointer",
+                on_click=lambda: State.set_page("home"),
             ),
             rx.el.nav(
                 navbar_link("Inicio", "home"),
