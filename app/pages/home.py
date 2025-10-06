@@ -60,9 +60,9 @@ def sii_connector_promo() -> rx.Component:
                 class_name="md:w-1/2",
             ),
             rx.el.div(
-                rx.el.img(
-                    src="/electronic_invoicing_financial.png",
-                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-blue-800",
+                rx.el.video(
+                    src="/sii_conn/sii_conn_promo.mp4",
+                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-blue-800"
                 ),
                 class_name="md:w-1/2 mt-8 md:mt-0",
             ),
@@ -165,7 +165,7 @@ def intro_section() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.img(
-                    src="/FACIVAT/3.png",
+                    src="/FACIVAT/integracion.png",
                     class_name="rounded-xl shadow-2xl w-full h-auto object-cover",
                 ),
                 class_name="md:w-5/12",

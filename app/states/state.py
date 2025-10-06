@@ -16,24 +16,24 @@ class State(rx.State):
     current_page: str = "home"
     services: list[Service] = [
         Service(
-            image="/modern_software_development.png",
+            image="/desarrollo_apps.png",
             description="Desarrollo de Aplicaciones a Medida",
         ),
         Service(
-            image="/artificial_intelligence_machine.png",
+            image="/IA.jpg",
             description="Creación de Agentes de IA Avanzados",
         ),
         Service(
-            image="/business_consulting_technology.png",
+            image="/Asesorias.jpg",
             description="Asesorías y Consultoría Tecnológica",
         ),
         Service(
-            image="/cloud_computing_web.png",
-            description="Diseño y Desarrollo de Páginas Web",
+            image="/desarrollo_software.jpg",
+            description="Diseño y Desarrollo de Software a Medida",
         ),
         Service(
-            image="/electronic_invoicing_financial.png",
-            description="Integración de Procesos y Facturación",
+            image="/integracion.jpg",
+            description="Integración de Procesos",
         ),
     ]
     form_data: dict[str, str] = {}
