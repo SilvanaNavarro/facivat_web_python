@@ -22,29 +22,7 @@ def index() -> rx.Component:
             )
         ),
         footer(),
-        rx.cond(
-            State.show_scroll_top_button,
-            rx.el.button(
-                rx.icon("arrow-up"),
-                on_click=rx.call_script(
-                    "window.scrollTo({top: 0, behavior: 'smooth'})"
-                ),
-                class_name="fixed bottom-8 right-8 bg-orange-500 text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition-all z-50 animate-fade-in",
-            ),
-        ),
-        on_mount=rx.call_script("""
-            const handleScroll = () => {
-                const isScrolled = window.scrollY > 200;
-                if (isScrolled !== window._isScrolled) {
-                    window._isScrolled = isScrolled;
-                    _reflex_internal.event_handlers.State.set_show_scroll_top_button(isScrolled);
-                }
-            };
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
-            """),
         class_name="bg-gray-900 font-['Raleway']",
-        id="main-container",
     )
 
 
@@ -64,13 +42,6 @@ app = rx.App(
             }
             .animate-marquee {
                 animation: marquee 30s linear infinite;
-            }
-            @keyframes fade-in {
-                0% { opacity: 0; }
-                100% { opacity: 1; }
-            }
-            .animate-fade-in {
-                animation: fade-in 0.3s ease-in-out;
             }
             """),
     ],
