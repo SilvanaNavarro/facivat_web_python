@@ -46,4 +46,4 @@ app = rx.App(
             """),
     ],
 )
-app.add_page(index, title="Tech Solutions - Innovación y Desarrollo")
+app.add_page(index, title="Facivat - Innovación y Desarrollo")
