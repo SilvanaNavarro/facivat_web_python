@@ -7,24 +7,26 @@ def animated_service_banner() -> rx.Component:
         rx.el.div(
             rx.foreach(
                 State.services,
-                lambda service: rx.el.div(
+                lambda service: rx.el.a(
                     rx.el.img(src=service.image, class_name="h-48 w-full object-cover"),
                     rx.el.p(
                         service.description,
                         class_name="mt-2 text-center font-semibold text-white",
                     ),
-                    class_name="flex-none w-64 mx-4 p-4 bg-gray-800/50 rounded-lg shadow-xl",
+                    class_name="flex-none w-64 mx-4 p-4 bg-gray-800/50 rounded-lg shadow-xl cursor-pointer",
+                    on_click=lambda: rx.scroll_to("other_services_section"),
                 ),
             ),
             rx.foreach(
                 State.services,
-                lambda service: rx.el.div(
+                lambda service: rx.el.a(
                     rx.el.img(src=service.image, class_name="h-48 w-full object-cover"),
                     rx.el.p(
                         service.description,
                         class_name="mt-2 text-center font-semibold text-white",
                     ),
-                    class_name="flex-none w-64 mx-4 p-4 bg-gray-800/50 rounded-lg shadow-xl",
+                    class_name="flex-none w-64 mx-4 p-4 bg-gray-800/50 rounded-lg shadow-xl cursor-pointer",
+                    on_click=lambda: rx.scroll_to("other_services_section"),
                 ),
             ),
             class_name="flex animate-marquee",
@@ -112,6 +114,7 @@ def other_services() -> rx.Component:
             ),
             class_name="container mx-auto px-6 py-20",
         ),
+        id="other_services_section",
         class_name="bg-gray-900",
     )
 

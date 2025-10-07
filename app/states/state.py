@@ -38,6 +38,7 @@ class State(rx.State):
     form_data: dict[str, str] = {}
     show_demo_form: bool = False
     active_service_index: int = -1
+    show_scroll_top_button: bool = False
     other_services_list: list[OtherServiceInfo] = [
         OtherServiceInfo(
             image="/agente_ia.jpg",
@@ -60,6 +61,10 @@ class State(rx.State):
             description="Ofrecemos asesoría con Project Managers certificados para garantizar el éxito de tus proyectos tecnológicos.",
         ),
     ]
+
+    @rx.event
+    def set_show_scroll_top_button(self, show: bool):
+        self.show_scroll_top_button = show
 
     @rx.event
     def set_active_service_index(self, index: int):
