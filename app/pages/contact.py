@@ -17,12 +17,12 @@ def contact_page() -> rx.Component:
                 rx.el.div(
                     rx.el.div(
                         rx.icon("map-pin", class_name="h-6 w-6 text-orange-500 mr-3"),
-                        "Santiago, Chile",
+                        "Concepción, Chile",
                         class_name="flex items-center text-gray-300 mt-8",
                     ),
                     rx.el.div(
                         rx.icon("mail", class_name="h-6 w-6 text-orange-500 mr-3"),
-                        "contacto@techsolutions.cl",
+                        "contacto@facivat.com",
                         class_name="flex items-center text-gray-300 mt-4",
                     ),
                     rx.el.div(

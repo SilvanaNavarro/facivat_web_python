@@ -102,13 +102,13 @@ def sii_conn_page() -> rx.Component:
             class_name="container mx-auto px-6 pt-20 pb-10",
         ),
         feature_section(
-            image_src="/sii_conn/Diseño sin título (1).png",
-            title="Integración Directa y Segura",
+            image_src="/sii_conn/1.png",
+            title="Aplicación amigable e intuitiva",
             description="Nuestra API se conecta directamente con los servicios del SII, garantizando una comunicación segura y sin intermediarios. Cumpla con todas las normativas vigentes y mantenga su información tributaria protegida.",
             reverse=False,
         ),
         feature_section(
-            image_src="/sii_conn/Diseño sin título (2).png",
+            image_src="/sii_conn/emision.png",
             title="Automatización de Documentos Tributarios",
             description="Genere, envíe, reciba y gestione Facturas, Boletas, Notas de Crédito/Débito y Guías de Despacho de forma automática. Reduzca errores manuales y ahorre tiempo valioso para su equipo.",
             reverse=True,
