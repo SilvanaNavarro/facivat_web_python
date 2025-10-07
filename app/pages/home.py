@@ -122,7 +122,7 @@ def intro_section() -> rx.Component:
             rx.el.div(
                 rx.el.img(
                     src="servicios.jpg",
-                    class_name="rounded-xl shadow-2xl w-full h-auto object-cover",
+                    class_name="rounded-xl shadow-2xl w-full h-full object-cover",
                 ),
                 class_name="md:w-5/12",
             ),
@@ -141,7 +141,7 @@ def intro_section() -> rx.Component:
                 ),
                 class_name="md:w-7/12",
             ),
-            class_name="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12",
+            class_name="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-stretch gap-12",
         ),
         class_name="bg-gray-900",
     )

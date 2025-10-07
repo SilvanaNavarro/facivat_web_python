@@ -38,8 +38,7 @@ Nos motiva ser un aliado estratégico para cada cliente, entendiendo sus necesid
                     rx.el.p(
                         """Nuestra visión es transformar la manera en que los negocios gestionan y ayudar a las empresas a hacer crecer sus operaciones, ofreciendo soluciones tecnológicas que simplifiquen procesos, fomenten la innovación y generen igualdad de oportunidades en el entorno empresarial.
                             Aspiramos a ser reconocidos como una empresa confiable, creativa y visionaria, que impulsa el desarrollo digital de los negocios y contribuye al progreso económico y social.
-                            Queremos construir un futuro donde la tecnología sea una herramienta accesible para todos, facilitando el crecimiento sostenible y la competitividad de las empresas en un mundo cada vez más digital.""" \
-                        "Queremos ser el socio tecnológico líder y de mayor confianza para empresas en Latinoamérica, reconocidos por nuestra innovación constante, excelencia en la ejecución y un profundo entendimiento de las necesidades de nuestros clientes, liderando la adopción de inteligencia artificial y automatización en tus procesos.",
+                            Queremos construir un futuro donde la tecnología sea una herramienta accesible para todos, facilitando el crecimiento sostenible y la competitividad de las empresas en un mundo cada vez más digital.Queremos ser el socio tecnológico líder y de mayor confianza para empresas en Latinoamérica, reconocidos por nuestra innovación constante, excelencia en la ejecución y un profundo entendimiento de las necesidades de nuestros clientes, liderando la adopción de inteligencia artificial y automatización en tus procesos.""",
                         class_name="text-gray-300 leading-relaxed",
                     ),
                     class_name="bg-gray-800/50 p-8 rounded-xl shadow-lg border border-blue-800",

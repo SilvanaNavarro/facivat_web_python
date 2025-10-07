@@ -10,9 +10,9 @@ def feature_section(
         rx.el.div(
             rx.el.img(
                 src=image_src,
-                class_name="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-blue-800",
+                class_name="rounded-xl shadow-2xl w-auto h-full max-h-[200px] object-contain",
             ),
-            class_name="md:w-1/2",
+            class_name="md:w-1/2 flex justify-center items-center",
         ),
         rx.el.div(
             rx.el.h3(title, class_name="text-2xl font-bold text-orange-500 mb-4"),
