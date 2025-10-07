@@ -10,7 +10,7 @@ def feature_section(
         rx.el.div(
             rx.el.img(
                 src=image_src,
-                class_name="rounded-xl shadow-2xl w-auto h-full max-h-[200px] object-contain",
+                class_name="rounded-xl shadow-2xl w-auto h-full max-h-[550px] object-contain",
             ),
             class_name="md:w-1/2 flex justify-center items-center",
         ),
@@ -102,7 +102,7 @@ def sii_conn_page() -> rx.Component:
             class_name="container mx-auto px-6 pt-20 pb-10",
         ),
         feature_section(
-            image_src="/sii_conn/1.png",
+            image_src="/sii_conn/principal.png",
             title="Aplicación amigable e intuitiva",
             description="Nuestra API se conecta directamente con los servicios del SII, garantizando una comunicación segura y sin intermediarios. Cumpla con todas las normativas vigentes y mantenga su información tributaria protegida.",
             reverse=False,
@@ -114,13 +114,13 @@ def sii_conn_page() -> rx.Component:
             reverse=True,
         ),
         feature_section(
-            image_src="/sii_conn/Diseño sin título (3).png",
+            image_src="/sii_conn/dashboard.png",
             title="Dashboard de Monitoreo en Tiempo Real",
             description="Visualice el estado de todos sus documentos tributarios en un panel de control intuitivo. Monitoree envíos, aceptaciones y rechazos del SII en tiempo real, manteniendo el control total sobre su facturación.",
             reverse=False,
         ),
         feature_section(
-            image_src="/sii_conn/Diseño sin título (4).png",
+            image_src="/sii_conn/estadisticas.png",
             title="Fácil Integración con sus Sistemas",
             description="Diseñado para ser flexible, SII Connector se integra fácilmente con su ERP, CRM o cualquier sistema de gestión existente. Ofrecemos documentación completa y soporte para una implementación rápida y sin complicaciones.",
             reverse=True,
